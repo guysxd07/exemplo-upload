@@ -95,5 +95,5 @@ app.get('/editar/:id',function(req,res){
  });
 });
 app.listen(3000,function(){
- console.log("Servidor Escutando na porta 3000");
+ console.log("Servidor Escutando na porta 80");
 });
