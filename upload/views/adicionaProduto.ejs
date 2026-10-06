@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<head> <%- include('head'); %> </head>
+<body>
+ <header> <%- include('menu'); %> </header>
+ <div class="container"> <h2>Inserir novo Registo</h2>
+ <form action="/adicionar" method="POST" enctype="multipart/form-data">
+ <div class="form-group"> <label for="usr">Nome:</label>
+ <input type="text" class="form-control" name="nome" required>
+ </div>
+ <div class="form-group"> <label for="usr">Descricao:</label>
+ <input type="textarea" class="form-control" name="descricao" required>
+ </div>
+ <div class="form-group"> <label for="pwd">Imagem:</label>
+ <input type="file" class="form-control" name="imagem" required>
+ </div>
+ <button type="submit" class="btn btn-primary">Enviar</button>
+ </form>
+ </div>
+</body>
+</html>

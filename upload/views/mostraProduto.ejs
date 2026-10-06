@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+ <%- include('head'); %>
+</head>
+<body>
+ <header>
+ <%- include('menu'); %>
+ </header>
+ <div class="container">
+ <h2>Registros</h2>
+ <table class="table table-bordered table-hover">
+ <thead class="thead-dark">
+ <tr>
+ <th>Nome</th>
+ <th>Descrição</th>
+ <th>Imagem</th>
+ <th>Ações</th>
+ </tr>
+ </thead>
+ <tbody>
+    <% dadosProduto.forEach(function(dados) { %>
+ <tr>
+ <td><%= dados.nome %></td>
+ <td><%= dados.descricao %></td>
+ <td><img src="imagens/<%=dados.imagem %>"class = "mx-auto d-block" style =
+"height:100px"/></td>
+ <td> <a href="/editar/<%=dados.id %>"> <span class="material-icons ">create
+</span> </a>
+ <a href="/apagar/<%=dados.id %>">
+ <span class="material-icons ">delete </span>
+ </a>
+ </td>
+ </tr>
+ <% }) %>
+ </tbody>
+ </table>
+ </div>
+</body>
+</html>
